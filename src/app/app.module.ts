@@ -12,11 +12,12 @@ import { AppRoutingModule }   from './app-routing/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { HttpClientModule }    from '@angular/common/http';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   declarations: [ AppComponent,HeroesComponent, HeroDetailComponent, MessageComponent, DashboardComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [HeroServiceService, MessageService]
+  providers: [HeroServiceService, MessageService, InMemoryDataService]
 })
 export class AppModule { }
